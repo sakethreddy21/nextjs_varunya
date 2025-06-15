@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '../AppIcon';
-
+import logo from '../../Vaarunya_cropped_bg.png'
+import Image from 'next/image';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,9 +12,9 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Home', path: '/homepage-premium-b2b-trade-platform', icon: 'Home' },
-    { name: 'About', path: '/about-trust-building-corporate-story', icon: 'Users' },
-    { name: 'Products', path: '/products-interactive-category-explorer', icon: 'Package' },
-    { name: 'Process', path: '/process-transparency-center', icon: 'GitBranch' },
+    { name: 'About', path: '/about', icon: 'Users' },
+    { name: 'Products', path: '/products-', icon: 'Package' },
+  // { name: 'Process', path: '/process-transparency-center', icon: 'GitBranch' },
     { name: 'Contact', path: '/contact', icon: 'Mail' },
   ];
 
@@ -54,24 +55,20 @@ const Header = () => {
             className="flex items-center space-x-3 group"
             onClick={closeMenu}
           >
-            <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shadow-card group-hover:shadow-hover transition-all duration-300 group-hover:scale-105">
-                <svg 
-                  className="w-6 h-6 lg:w-7 lg:h-7 text-white" 
-                  viewBox="0 0 24 24" 
-                  fill="currentColor"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-            </div>
+          <div className="flex-shrink-0  ml-[-10px]"> {/* Added ml-[-8px] to shift logo left */}
+            <Image
+            width={64}
+            height={64}
+              src={logo}
+              alt="Vaarunya Logo"
+              className="h-16 w-auto object-contain"
+            />
+          </div>
             <div className="hidden sm:block">
               <h1 className="text-xl lg:text-2xl font-montserrat font-bold text-secondary-dark group-hover:text-primary transition-colors duration-300">
                 Vaarunya
               </h1>
-              <p className="text-xs lg:text-sm text-secondary-light font-inter -mt-1">
-                Global Trade Bridge
-              </p>
+
             </div>
           </Link>
 
