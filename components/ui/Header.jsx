@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   const navigationItems = [
-    { name: 'Home', path: '/homepage-premium-b2b-trade-platform', icon: 'Home' },
+    { name: 'Home', path: '/', icon: 'Home' },
     { name: 'About', path: '/about', icon: 'Users' },
     { name: 'Products', path: '/products-', icon: 'Package' },
   // { name: 'Process', path: '/process-transparency-center', icon: 'GitBranch' },
@@ -66,7 +66,7 @@ const Header = () => {
           </div>
             <div className="hidden sm:block">
               <h1 className="text-xl lg:text-2xl font-montserrat font-bold text-secondary-dark group-hover:text-primary transition-colors duration-300">
-                Vaarunya
+              {/* Vaarunya */}
               </h1>
 
             </div>

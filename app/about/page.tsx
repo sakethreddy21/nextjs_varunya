@@ -50,22 +50,22 @@ export default function About() {
             <p className="text-xl lg:text-2xl text-secondary-light font-inter leading-relaxed mb-8">
               From humble beginnings to global partnerships, discover how Vaarunya transforms international trade through transparency, quality, and unwavering commitment to our partners.
             </p>
-        {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-            href="/get-quote-intelligent-conversion-portal"
-            className="btn-primary inline-flex items-center"
-            >
-            <Icon name="MessageSquare" size={20} className="mr-2" />
-            Start Partnership
-            </Link>
-            <Link
-            href="/contact-global-accessibility-hub"
-            className="btn-secondary inline-flex items-center"
-            >
-            <Icon name="Users" size={20} className="mr-2" />
-            Meet Our Team
-            </Link>
-        </div> */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+          href="/get-quote-intelligent-conversion-portal"
+          className="btn-primary inline-flex items-center"
+          >
+          <Icon name="MessageSquare" size={20} className="mr-2" />
+          Start Partnership
+          </Link>
+          <Link
+          href="/contact-global-accessibility-hub"
+          className="btn-secondary inline-flex items-center"
+          >
+          <Icon name="Users" size={20} className="mr-2" />
+          Meet Our Team
+          </Link>
+      </div>
           </motion.div>
         </div>
       </section>
