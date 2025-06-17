@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '../AppIcon';
-import logo from '../../Vaarunya_cropped_bg.png';
+import logo from '@/Vaarunya_cropped_bg.png';
 import Image from 'next/image';
 
 const Header = () => {

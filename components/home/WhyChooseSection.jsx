@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Icon from '@/components/AppIcon';
-import Image from '@/components/AppImage';
+import Image from 'next/image';
+import Icon from '@/components/AppIcon'; // Adjust path based on your project structure
 
 const WhyChooseSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -47,7 +47,20 @@ const WhyChooseSection = () => {
         { label: "Cultural Training", value: "Ongoing" },
         { label: "Client Satisfaction", value: "98%" }
       ]
-    }
+    },
+        {
+      id: 4,
+      title: "Flexible Pricing Models",
+      icon: "DollarSign",
+      shortDescription: "Experienced professionals dedicated to providing personalized service and support",
+      fullDescription: `Our global network spans across 50+ countries with established partnerships, local market expertise, and cultural understanding. We've built strong relationships with suppliers, logistics partners, and regulatory bodies worldwide, ensuring smooth operations regardless of destination. Our network includes dedicated representatives in key markets who understand local business practices, regulations, and customer preferences.`,
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      stats: [
+        { label: "Countries", value: "50+" },
+        { label: "Partners", value: "200+" },
+        { label: "Time Zones", value: "12" }
+      ]
+    },
   ];
 
   const toggleExpanded = (id) => {
@@ -66,7 +79,7 @@ const WhyChooseSection = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-4 gap-8">
         {features.map((feature) => (
           <div
             key={feature.id}
@@ -77,44 +90,46 @@ const WhyChooseSection = () => {
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center">
-                    <Icon name={feature.icon} size={32} className="text-primary" />
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center">
+                  <Icon name={feature.icon} size={32} className="text-primary" />
+                </div>
                   <div>
                     <h3 className="text-xl font-montserrat font-bold text-secondary-dark mb-2">
                       {feature.title}
                     </h3>
                   </div>
                 </div>
-                <button
-                  onClick={() => toggleExpanded(feature.id)}
-                  className="p-2 text-secondary-light hover:text-primary transition-colors duration-300"
-                  aria-label={expandedCard === feature.id ? "Collapse" : "Expand"}
-                >
-                  <Icon 
-                    name={expandedCard === feature.id ? "ChevronUp" : "ChevronDown"} 
-                    size={24} 
-                  />
-                </button>
+              {/* <button
+                onClick={() => toggleExpanded(feature.id)}
+                className="p-2 text-secondary-light hover:text-primary transition-colors duration-300"
+                aria-label={expandedCard === feature.id ? "Collapse" : "Expand"}
+              >
+                <Icon 
+                  name={expandedCard === feature.id ? "ChevronUp" : "ChevronDown"} 
+                  size={24} 
+                />
+              </button> */}
               </div>
 
               <p className="text-secondary-light mb-6 leading-relaxed">
                 {feature.shortDescription}
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {feature.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl font-montserrat font-bold text-primary mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-secondary-light">
-                      {stat.label}
-                    </div>
+              {/* Stats */}
+            {/* <div className="grid grid-cols-3 gap-4 mb-6">
+              {feature.stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-montserrat font-bold text-primary mb-1">
+                    {stat.value}
                   </div>
-                ))}
-              </div>
+                  <div className="text-xs text-secondary-light">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div> */}
 
+              {/* Expanded Content */}
               {expandedCard === feature.id && (
                 <div className="border-t border-border-light pt-6 animation-fade-in">
                   <div className="grid lg:grid-cols-2 gap-8">
@@ -137,7 +152,10 @@ const WhyChooseSection = () => {
                       <Image
                         src={feature.image}
                         alt={feature.title}
+                        width={800}
+                        height={400}
                         className="w-full h-64 object-cover"
+                        priority={false}
                       />
                     </div>
                   </div>
@@ -148,6 +166,7 @@ const WhyChooseSection = () => {
         ))}
       </div>
 
+      {/* CTA Section */}
       <div className="mt-16 text-center">
         <div className="bg-gradient-to-r from-primary/5 to-accent rounded-2xl p-8 lg:p-12">
           <h3 className="text-2xl lg:text-3xl font-montserrat font-bold text-secondary-dark mb-4">
