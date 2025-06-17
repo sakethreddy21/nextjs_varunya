@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 
 
-import HeroCarousel from '@/components/home/HeroCarousel';
+import HeroSlider from '@/components/home/HeroCarousel';
 import TrustIndicators from '@/components/home/TrustIndicators';
 import WhyChooseSection from '@/components/home/WhyChooseSection';
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel';
@@ -20,10 +20,10 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
       {/* Hero Carousel Section */}
-      <section className="relative">
-        <HeroCarousel />
+      <section >
+        <HeroSlider />
       </section>
 
       {/* Trust Indicators Bar */}
