@@ -137,6 +137,7 @@ const ProductCategories = () => {
       ],
       certifications: ["Hallmark", "BIS Certified", "Export Quality"],
     },
+    
   ];
 
   return (
@@ -173,17 +174,17 @@ const ProductCategories = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
               {/* Seasonal Indicator */}
-              <div className="absolute top-4 right-4">
-                <div
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    category.seasonalAvailability === "Year-round"
-                      ? "bg-green-500 text-white"
-                      : "bg-orange-500 text-white"
-                  }`}
-                >
-                  {category.seasonalAvailability}
-                </div>
+            {/* <div className="absolute top-4 right-4">
+              <div
+                className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  category.seasonalAvailability === "Year-round"
+                    ? "bg-green-500 text-white"
+                    : "bg-orange-500 text-white"
+                }`}
+              >
+                {category.seasonalAvailability}
               </div>
+            </div> */}
 
               {/* Category Icon */}
               <div className="absolute bottom-4 left-4">
@@ -203,16 +204,16 @@ const ProductCategories = () => {
               </p>
 
               {/* Certifications */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {category.certifications.map((cert, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
-                  >
-                    {cert}
-                  </span>
-                ))}
-              </div>
+            {/* <div className="flex flex-wrap gap-2 mb-4">
+              {category.certifications.map((cert, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
+                >
+                  {cert}
+                </span>
+              ))}
+            </div> */}
 
               {/* Hover Content */}
               {hoveredCategory === category.id && (
@@ -239,19 +240,19 @@ const ProductCategories = () => {
                       ))}
                     </div>
 
-                    <h4 className="font-montserrat font-semibold text-secondary-dark mb-2">
-                      Popular Products
-                    </h4>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {category.popularProducts.map((product, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-accent text-secondary text-xs rounded"
-                        >
-                          {product}
-                        </span>
-                      ))}
-                    </div>
+                  {/* <h4 className="font-montserrat font-semibold text-secondary-dark mb-2">
+                    Popular Products
+                  </h4>
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {category.popularProducts.map((product, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-accent text-secondary text-xs rounded"
+                      >
+                        {product}
+                      </span>
+                    ))}
+                  </div> */}
                   </div>
                 </div>
               )}

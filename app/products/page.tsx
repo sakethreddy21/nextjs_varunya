@@ -128,8 +128,8 @@ const ProductsExplorer = () => {
               Interactive Product Explorer
             </h1>
             <p className="text-xl text-secondary-light max-w-3xl mx-auto mb-8">
-              Discover our comprehensive range of premium products with intelligent filtering,
-              quality assurance details, and seasonal availability insights.
+             Discover our wide range of premium, high-quality products.
+             Crafted to meet diverse needs with unmatched excellence.
             </p>
             {/* Search & View Toggle */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-8">
