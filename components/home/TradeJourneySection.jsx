@@ -75,19 +75,19 @@ export default function Footer() {
             <h3 className="text-gray-100 text-xl font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4">
               <div className="text-gray-300">
-                <p>123 Trade Plaza, Export District</p>
-                <p>Mumbai, Maharashtra 400001</p>
-                <p>India</p>
+                <p>51-6-9, Vijayawada Muncipa Corporation</p>
+                <p>Revenue Ward 2A, Machavaram,</p>
+                <p>Vijayawada - 520004, Andhra Pradesh, India</p>
               </div>
 
               <div>
                 <p className="text-yellow-500 font-medium">Phone:</p>
-                <p className="text-gray-300">+91 (22) 1234-5678</p>
+                <p className="text-gray-300">+91 9100477554</p>
               </div>
 
               <div>
                 <p className="text-yellow-500 font-medium">Email:</p>
-                <p className="text-gray-300">info@vaarunyaglobal.com</p>
+                <p className="text-gray-300">info@vaarunyaglobalexim.com</p>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">©️ 2024 Vaarunya Global Exim. All rights reserved.</p>
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">©️ 2025 Vaarunya Global Exim Pvt Ltd. All rights reserved.</p>
 
           <div className="flex space-x-6 text-sm">
             <Link href="#" className="text-gray-400 hover:text-white transition-colors">
