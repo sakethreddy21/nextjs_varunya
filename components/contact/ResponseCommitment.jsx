@@ -96,14 +96,14 @@ const ResponseCommitment = () => {
     },
     {
       level: 'High',
-      timeframe: 'Within 3-6 hours',
+      timeframe: 'Within 6-8 hours',
       description: 'Order modifications, shipping updates, and time-sensitive business matters',
       icon: 'AlertTriangle',
       color: 'text-orange-600 bg-orange-100'
     },
     {
       level: 'Urgent',
-      timeframe: 'Within 1 Hour',
+      timeframe: 'Within 2-4 hours',
       description: 'Customs issues, shipment delays, quality concerns, and emergency situations',
       icon: 'AlertCircle',
       color: 'text-red-600 bg-red-100'

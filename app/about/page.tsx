@@ -88,14 +88,13 @@ export default function About() {
 {/* Quality Assurance
 <QualityAssurance /> */}
 
-      {/* Certifications Gallery */}
-      <CertificationsGallery />
-
       {/* Partnership Philosophy */}
       <PartnershipPhilosophy />
 
 {/* Company Profile Download
 <CompanyProfile /> */}
+      {/* Certifications Gallery */}
+      <CertificationsGallery />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-gradient-to-r from-primary to-primary-dark">
@@ -128,6 +127,7 @@ export default function About() {
                 Explore Products
               </Link>
             </div>
+            
           </motion.div>
         </div>
       </section>
