@@ -20,13 +20,12 @@ export default function Footer() {
               />
             </div>
               <div>
-                <h3 className="text-gray-300 text-xl font-semibold">Vaarunya Global Exim</h3>
+                <h3 className="text-gray-300 text-xl font-semibold">Vaarunya Global Exim Pvt Ltd</h3>
               </div>
             </div>
 
             <p className="text-gray-300 leading-relaxed">
-              Building lasting partnerships through transparent global trade solutions. We connect verified suppliers
-              with serious buyers worldwide, making international trade accessible, secure, and rewarding.
+              Building enduring partnerships through transparent global trade solutions. We connect verified suppliers with serious buyers worldwide, making international trade accessible, secure, and rewarding.
             </p>
 
             <div className="flex space-x-4">
@@ -52,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links Section */}
-          <div>
+          <div className="ml-30">
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <nav className="space-y-4">
               <Link href="#" className="block text-gray-300 hover:text-white transition-colors">

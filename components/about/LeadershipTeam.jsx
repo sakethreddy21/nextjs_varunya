@@ -8,51 +8,40 @@ const LeadershipTeam = () => {
 
   const teamData = [
     {
-      name: "Rajesh Sharma",
+      name: "Rudraraju Mithilesh Varma",
       position: "Founder & CEO",
       experience: "15+ Years",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-      bio: `Rajesh brings over 15 years of international trade expertise, having worked with Fortune 500 companies across Asia-Pacific. His vision of transparent and ethical trade practices has been the driving force behind Vaarunya's success.
-
-Before founding Vaarunya, Rajesh held senior positions at leading export houses and has personally facilitated trade worth over $100 million. He holds an MBA in International Business from IIM Bangalore and is a certified member of the Federation of Indian Export Organisations (FIEO).`,
-      philosophy: "Business is not just about profit; it\'s about building relationships that create value for everyone involved.",
+      bio: `Rudraraju Mithilesh Varma is the Founder and Chief Executive Officer of Vaarunya Global EXIM, the driving force behind its vision to redefine India’s presence in global trade through an integrated, ethical, and impact-oriented export ecosystem that connects rural India directly to international markets. As a first-generation entrepreneur, He brings a bold and future-focused vision—rooted in strategic foresight, strengthened by data-driven leadership, refined through operational excellence, and backed by deep expertise in agriculture, leather, and FMCG exports.
+      With an unwavering commitment to transparency, innovation, and rural empowerment, Mithilesh has architected Vaarunya’s brand-led and compliance-driven model—bridging the gap between grassroots producers and international markets. His leadership is distinguished by a systems-thinking mindset, data-driven strategy, and the ability to build high-trust global partnerships.`,
+      philosophy: "True leadership is not about commanding growth—it’s about cultivating ecosystems where trust, impact, and innovation thrive from the grassroots to the globe.",
       certifications: ["MBA - International Business", "FIEO Certified", "Export-Import Management"],
       specialties: ["Strategic Planning", "International Relations", "Trade Policy"]
     },
     {
-      name: "Priya Patel",
-      position: "Chief Operations Officer",
+      name: "Surya Teja Veeramachineni",
+      position: "Co-Founder and Chairman",
       experience: "12+ Years",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-      bio: `Priya oversees all operational aspects of Vaarunya's global trade activities. With her background in supply chain management and logistics, she ensures seamless execution of complex international transactions. Her expertise in quality assurance and process optimization has helped Vaarunya achieve industry-leading delivery success rates. Priya holds a Master's degree in Supply Chain Management and is Six Sigma Black Belt certified.`,
-      philosophy: "Excellence in operations is not an accident; it\'s the result of meticulous planning and continuous improvement.",
+      bio: `Surya Teja Veeramachineni is the Co-Founder and Chairman of Vaarunya Global EXIM, providing visionary leadership and shaping the company’s strategic direction, governance, and long-term positioning. With a deep-rooted belief in sustainable growth and inclusive value creation, Surya Teja plays a key role in shaping Vaarunya’s long-term strategy, governance, and global positioning.
+      He brings a sharp entrepreneurial mindset and a strong focus on innovation, risk management, and stakeholder alignment—ensuring the company remains resilient, future-focused, and impact-driven. As Chairman, Surya Teja champions Vaarunya’s mission of building a transparent, ethical, and high-performing export ecosystem that benefits both grassroots producers and global trade partners.
+      His leadership continues to inspire the company’s pursuit of excellence, responsibility, and long-term impact.`,
+      philosophy: "Business is not just about profit; it's about building relationships that create value for everyone involved.",
       certifications: ["M.Sc. Supply Chain Management", "Six Sigma Black Belt", "PMP Certified"],
       specialties: ["Operations Management", "Quality Assurance", "Process Optimization"]
     },
     {
-      name: "David Chen",
-      position: "Head of International Markets",
+      name: "Kusampudi Venkata Sriram Varma",
+      position: "Co-Founder and Managing Director",
       experience: "10+ Years",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-      bio: `David leads our international market expansion and maintains relationships with key partners across 50+ countries. His multicultural background and language skills make him invaluable in cross-cultural business negotiations.
-
-Having worked in Singapore, Hong Kong, and Dubai before joining Vaarunya, David brings deep understanding of Asian and Middle Eastern markets. He speaks five languages fluently and holds degrees in International Commerce and Cultural Studies.`,
-      philosophy: "Understanding culture is the key to successful international business relationships.",
+      bio: `Kusampudi Venkata Sriram Varma is the Co-Founder and Managing Director of Vaarunya Global EXIM, playing a pivotal role in steering the company’s operational excellence and strategic growth. With a strong background in export management and business development, Sriram brings a pragmatic and results-driven approach to driving Vaarunya’s mission of transparent, quality-led exports that empower grassroots producers.
+      His expertise spans supply chain optimization, compliance adherence, and building sustainable partnerships across agriculture, leather, and FMCG sectors. Sriram’s leadership is marked by his commitment to operational rigor, innovation, and fostering a culture of accountability—ensuring that Vaarunya delivers consistent value to its global clients and Indian partners alike.`,
+      philosophy: "Success is not just achieving milestones, but creating a culture where purpose drives performance, and values guide every decision.",
       certifications: ["International Commerce Degree", "Cultural Studies Certification", "Trade Finance Specialist"],
       specialties: ["Market Expansion", "Cross-cultural Communication", "Partnership Development"]
     },
-    {
-      name: "Sarah Johnson",
-      position: "Head of Quality & Compliance",
-      experience: "8+ Years",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-      bio: `Sarah ensures that all Vaarunya operations meet the highest international quality standards and regulatory compliance requirements. Her attention to detail and systematic approach has earned client trust worldwide.
 
-With extensive experience in quality management systems and international trade regulations, Sarah has implemented robust processes that maintain our 98% client satisfaction rate. She holds certifications in ISO standards and international trade compliance.`,
-      philosophy: "Quality is not negotiable; it\'s the foundation upon which trust is built.",
-      certifications: ["ISO 9001 Lead Auditor", "International Trade Compliance", "Quality Management Systems"],
-      specialties: ["Quality Management", "Regulatory Compliance", "Risk Assessment"]
-    }
   ];
 
   return (
@@ -102,7 +91,7 @@ With extensive experience in quality management systems and international trade 
                       {leader.name}
                     </h3>
                     <p className="text-primary font-medium">{leader.position}</p>
-                    <p className="text-sm text-secondary-light">{leader.experience}</p>
+                  {/* <p className="text-sm text-secondary-light">{leader.experience}</p> */}
                   </div>
                 </div>
                 <p className="text-secondary-light mb-4">{leader.bio}</p>
@@ -188,9 +177,9 @@ With extensive experience in quality management systems and international trade 
                   <p className="text-primary font-semibold text-lg mb-1">
                     {teamData[activeLeader].position}
                   </p>
-                  <p className="text-secondary-light">
-                    {teamData[activeLeader].experience} Experience
-                  </p>
+                {/* <p className="text-secondary-light">
+                  {teamData[activeLeader].experience} Experience
+                </p> */}
                 </div>
               </div>
 
@@ -205,36 +194,36 @@ With extensive experience in quality management systems and international trade 
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-montserrat font-semibold text-secondary-dark mb-3">
-                    Certifications
-                  </h4>
-                  <ul className="space-y-2">
-                    {teamData[activeLeader].certifications.map((cert, idx) => (
-                      <li key={idx} className="flex items-center text-secondary-light">
-                        <Icon name="Award" size={16} className="text-primary mr-2 flex-shrink-0" />
-                        {cert}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-montserrat font-semibold text-secondary-dark mb-3">
-                    Specialties
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {teamData[activeLeader].specialties.map((specialty, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-accent text-secondary text-sm rounded-full"
-                      >
-                        {specialty}
-                      </span>
-                    ))}
-                  </div>
+            {/* <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-montserrat font-semibold text-secondary-dark mb-3">
+                  Certifications
+                </h4>
+                <ul className="space-y-2">
+                  {teamData[activeLeader].certifications.map((cert, idx) => (
+                    <li key={idx} className="flex items-center text-secondary-light">
+                      <Icon name="Award" size={16} className="text-primary mr-2 flex-shrink-0" />
+                      {cert}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-montserrat font-semibold text-secondary-dark mb-3">
+                  Specialties
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {teamData[activeLeader].specialties.map((specialty, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-accent text-secondary text-sm rounded-full"
+                    >
+                      {specialty}
+                    </span>
+                  ))}
                 </div>
               </div>
+            </div> */}
             </motion.div>
           </div>
         </div>

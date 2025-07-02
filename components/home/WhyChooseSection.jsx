@@ -11,9 +11,9 @@ const WhyChooseSection = () => {
   const features = [
     {
       id: 1,
-      title: "Global Network",
+      title: "Innovation in Export",
       icon: "Globe2",
-      shortDescription: "Extensive worldwide connections spanning 50+ countries with established trade relationships.",
+      shortDescription: "We redefine global trade through demand-linked procurement, export-grade quality, real-time tracking, and integrated logistics delivering faster, smarter, and more reliable exports with precision and value.",
       fullDescription: `Our global network spans across 50+ countries with established partnerships, local market expertise, and cultural understanding. We've built strong relationships with suppliers, logistics partners, and regulatory bodies worldwide, ensuring smooth operations regardless of destination. Our network includes dedicated representatives in key markets who understand local business practices, regulations, and customer preferences.`,
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       stats: [
@@ -24,9 +24,9 @@ const WhyChooseSection = () => {
     },
     {
       id: 2,
-      title: "Quality Assurance",
+      title: "Premium Quality Products",
       icon: "ShieldCheck",
-      shortDescription: "Rigorous quality control processes with international certifications and third-party audits.",
+      shortDescription: "From aromatic spices to seafood, rice, pulses, fruits, and premium leather-explore our curated range of export-quality products with international certifications.",
       fullDescription: `Our comprehensive quality assurance program includes multiple checkpoints from source to destination. Every product undergoes rigorous testing, documentation, and certification processes. We maintain ISO 9001:2015 standards and work with accredited third-party laboratories for quality verification. Our quality team conducts regular supplier audits and maintains detailed traceability records for complete transparency.`,
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       stats: [
@@ -37,9 +37,9 @@ const WhyChooseSection = () => {
     },
     {
       id: 3,
-      title: "Cultural Bridge",
+      title: "Transparent Sourcing",
       icon: "Users",
-      shortDescription: "Deep understanding of international business cultures and practices for seamless communication.",
+      shortDescription: "Direct sourcing from certified MSMEs, SHGs, and organic farms ensures authenticity, traceability, and dependable supply consistency, giving clients confidence in every transaction.",
       fullDescription: `We serve as a cultural bridge between international markets, understanding the nuances of business practices across different regions. Our multilingual team is trained in international business etiquette, negotiation styles, and communication preferences. We facilitate smooth interactions by adapting our approach to match cultural expectations while maintaining transparency and professionalism throughout the process.`,
       image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       stats: [
@@ -50,9 +50,9 @@ const WhyChooseSection = () => {
     },
         {
       id: 4,
-      title: "Flexible Pricing Models",
+      title: "Competitive & Transparent Pricing",
       icon: "DollarSign",
-      shortDescription: "Experienced professionals dedicated to providing personalized service and support",
+      shortDescription: "From source to shipment, benefit from transparent, competitive pricing, powered by direct procurement and efficient trade practices with zero middlemen.",
       fullDescription: `Our global network spans across 50+ countries with established partnerships, local market expertise, and cultural understanding. We've built strong relationships with suppliers, logistics partners, and regulatory bodies worldwide, ensuring smooth operations regardless of destination. Our network includes dedicated representatives in key markets who understand local business practices, regulations, and customer preferences.`,
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       stats: [
@@ -173,8 +173,7 @@ const WhyChooseSection = () => {
             Ready to Experience the Difference?
           </h3>
           <p className="text-secondary-light mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied clients who trust Vaarunya for their international trade needs. 
-            Let's discuss how we can help your business grow globally.
+            Join global buyers who trust Vaarunya for transparent sourcing and consistent quality—meeting your international trade needs with end-to-end export excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

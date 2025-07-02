@@ -7,13 +7,10 @@ const FoundingStory = () => {
   const storyData = {
     title: "Our Journey Began with a Vision",
     subtitle: "Making International Trade Accessible and Transparent",
-    story: `In 2015, our founder Rajesh Sharma witnessed firsthand the challenges small and medium businesses faced when trying to enter international markets. Complex procedures, lack of transparency, and unreliable partnerships were creating barriers that seemed insurmountable.
-
-With over 15 years of experience in international trade and a deep understanding of both Indian manufacturing capabilities and global market demands, Rajesh envisioned a company that would bridge this gap. Vaarunya Global Exim was born from the belief that every business, regardless of size, deserves access to transparent, reliable, and ethical international trade partnerships.
-
-What started as a small export house in Mumbai has grown into a trusted global trade facilitator, but our core mission remains unchanged: to make international trade accessible, transparent, and mutually beneficial for all parties involved.`,
+    story: `While working closely with rural entrepreneurs and small-scale manufacturers, our founder Mithilesh Varma witnessed a critical gap despite having world-class potential, local producers were constrained by outdated systems, fragmented sourcing, and a lack of trust in the export process. These challenges inspired a bold question: What if global trade could truly serve those at the grassroots? Vaarunya was born from this idea to connect rural India to global markets through ethical sourcing, structured compliance, and value-led partnerships.
+    Vaarunya is not just an export house, it is a purpose-driven bridge connecting rural strength to global markets. With transparent sourcing and global-standard quality systems at its core, every shipment we deliver reflects our commitment to trusted partnerships, operational excellence, and meaningful global connections. Staying true to the vision that shaped our foundation, we continue to redefine trade as a force for empowerment, efficiency, and lasting impact, where every shipment carries the spirit of responsible trade and inclusive growth.`,
     founderQuote: "We don\'t just facilitate transactions; we build bridges between cultures, create lasting relationships, and turn the complexity of global trade into opportunities for growth.",
-    founderName: "Rajesh Sharma",
+    founderName: "Mithilesh Varma Rudraraju",
     founderTitle: "Founder & CEO, Vaarunya Global Exim",
     stats: [
       { number: "2015", label: "Founded" },
