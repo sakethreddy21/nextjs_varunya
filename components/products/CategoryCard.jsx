@@ -29,9 +29,7 @@ const CategoryCard = ({ category, onClick, viewMode }) => {
             )} */}
             </div>
             
-            <p className="text-secondary-light mb-4 line-clamp-2">
-              {category.description}
-            </p>
+            
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
             {/* <div>
@@ -89,9 +87,7 @@ const CategoryCard = ({ category, onClick, viewMode }) => {
       </div>
       
       <div className="p-6">
-        <p className="text-secondary-light mb-4 line-clamp-2">
-          {category.description}
-        </p>
+       
         
       {/* <div className="space-y-3 mb-6">
         <div className="flex items-center justify-between text-sm">
