@@ -89,21 +89,21 @@ const ResponseCommitment = () => {
   const urgencyLevels = [
     {
       level: 'Normal',
-      timeframe: '2-4 hours',
+      timeframe: 'Within 24 hours',
       description: 'Standard business inquiries, quotation requests, and general information',
       icon: 'Info',
       color: 'text-blue-600 bg-blue-100'
     },
     {
       level: 'High',
-      timeframe: 'Within 1 hour',
+      timeframe: 'Within 6-8 hours',
       description: 'Order modifications, shipping updates, and time-sensitive business matters',
       icon: 'AlertTriangle',
       color: 'text-orange-600 bg-orange-100'
     },
     {
       level: 'Urgent',
-      timeframe: 'Within 30 minutes',
+      timeframe: 'Within 2-4 hours',
       description: 'Customs issues, shipment delays, quality concerns, and emergency situations',
       icon: 'AlertCircle',
       color: 'text-red-600 bg-red-100'
@@ -180,9 +180,9 @@ const ResponseCommitment = () => {
                   {standard.title}
                 </h4>
                 <p className="text-sm text-secondary-light mb-3">{standard.description}</p>
-                <div className="text-xl font-montserrat font-bold text-primary">
-                  {standard.metric}
-                </div>
+              {/* <div className="text-xl font-montserrat font-bold text-primary">
+                {standard.metric}
+              </div> */}
               </div>
             ))}
           </div>

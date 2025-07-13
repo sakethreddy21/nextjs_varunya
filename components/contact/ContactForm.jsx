@@ -462,9 +462,9 @@ const ContactForm = () => {
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
             >
-              <option value="normal">Normal (2-4 hours)</option>
-              <option value="high">High (Within 1 hour)</option>
-              <option value="urgent">Urgent (Within 30 minutes)</option>
+              <option value="normal">Urgent (2-4 hours)</option>
+              <option value="high">High (6-8 hours)</option>
+              <option value="urgent">Normal (Within 24 hours)</option>
             </select>
           </div>
         </div>

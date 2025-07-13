@@ -28,9 +28,9 @@ export default function ContactPage() {
       icon: "Phone",
       title: "Call Us Directly",
       details: [
-        { region: "India", number: "+91 98765 43210", hours: "9:00 AM - 6:00 PM IST" },
-        { region: "USA", number: "+1 555 123 4567", hours: "9:00 AM - 5:00 PM EST" },
-        { region: "UAE", number: "+971 50 123 4567", hours: "9:00 AM - 6:00 PM GST" }
+        { region: "India", number: "+91 9390908096", hours: "9:00 AM - 6:00 PM IST" },
+        { region: "USA", number: "+1 (647) 221-5353", hours: "9:00 AM - 5:00 PM EST" },
+        { region: "CANADA", number: "+1 (647) 221-5353", hours: "9:00 AM - 6:00 PM CST" }
       ],
       description: "Speak directly with our trade specialists"
     },
@@ -39,7 +39,7 @@ export default function ContactPage() {
       icon: "MessageCircle",
       title: "WhatsApp Business",
       details: [
-        { region: "Global", number: "+91 98765 43210", hours: "24/7 Available" }
+        { region: "Global", number: "+91 9100477554", hours: "24/7 Available" }
       ],
       description: "Instant communication for quick queries"
     },
@@ -48,9 +48,9 @@ export default function ContactPage() {
       icon: "Mail",
       title: "Email Support",
       details: [
-        { type: "New Business", email: "sales@vaarunya.com", response: "Within 4 hours" },
-        { type: "Existing Clients", email: "support@vaarunya.com", response: "Within 2 hours" },
-        { type: "Partnerships", email: "partnerships@vaarunya.com", response: "Within 24 hours" }
+        { type: "Support Desk", email: "support@vaarunyaglobalexim.com", response: "Within 4 hours" },
+        { type: "Sales operations", email: "sales@vaarunyaglobalexim.com", response: "Within 2 hours" },
+        { type: " Global Partnerships", email: "partnerships@vaarunyaglobalexim.com", response: "Within 24 hours" }
       ],
       description: "Detailed inquiries and documentation"
     },
@@ -137,18 +137,18 @@ export default function ContactPage() {
                           <span className="text-primary font-semibold">{detail.email}</span>
                         </div>
                       )}
-                      {'availability' in detail && (
-                        <div className="flex justify-between">
-                          <span className="font-medium text-secondary">{detail.availability}:</span>
-                          <span className="text-secondary-light">{detail.hours}</span>
-                        </div>
-                      )}
-                      {'hours' in detail && !('availability' in detail) && (
-                        <div className="text-secondary-light text-center">{detail.hours}</div>
-                      )}
-                      {'response' in detail && (
-                        <div className="text-center text-green-600 font-medium">{detail.response}</div>
-                      )}
+                    {'availability' in detail && (
+                      <div className="flex justify-between">
+                        <span className="font-medium text-secondary">{detail.availability}:</span>
+                        <span className="text-secondary-light">{detail.hours}</span>
+                      </div>
+                    )}
+                    {'hours' in detail && !('availability' in detail) && (
+                      <div className="text-secondary-light text-center">{detail.hours}</div>
+                    )}
+                    {'response' in detail && (
+                      <div className="text-center text-green-600 font-medium">{detail.response}</div>
+                    )}
                     </div>
                   ))}
                 </div>

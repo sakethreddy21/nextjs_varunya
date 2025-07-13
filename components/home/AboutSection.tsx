@@ -10,10 +10,14 @@ const AboutSection = () => {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-secondary mb-6">About Vaarunya</h2>
             <p className="text-md text-gray-700 leading-relaxed">
-              At Vaarunya Global Exim, we don't just facilitate trade we build lasting partnerships that drive mutual growth and success. Our transparent approach, competitive pricing, and unwavering commitment to client satisfaction have made us the trusted choice for businesses across continents.
+              Vaarunya Global EXIM Pvt Ltd is a brand-led export house specializing in agriculture, leather, and FMCG commodities including spices, dairy, seafood, processed foods, and raw to finished leather. We source directly from certified MSMEs, SHGs, rural entrepreneurs, and proprietary organic farms ensuring transparent, demand-driven procurement that uplifts grassroots producers.
             </p>
             <p className="text-md text-gray-700 leading-relaxed">
-              We bridge continents by connecting verified suppliers with serious buyers worldwide, making global trade accessible, secure, and rewarding for businesses of all sizes. We partner exclusively with certified farmers, established manufacturers, and reputable wholesalers who share our commitment to excellence. Every product in our portfolio undergoes rigorous quality checks. From the first inquiry to final delivery, our experienced trade specialists provide end-to-end support, ensuring every transaction exceeds your expectations. 
+              Our commitment to quality is embedded at every stage, backed by in-house inspections, batch-level testing, and strict compliance with international packaging standards. This ensures product integrity and reliability in every shipment we deliver.
+              Driven by an integrated, innovation-led model, Vaarunya seamlessly connects Indian producers with global buyers promoting sustainable trade and consistent excellence across markets.
+            </p>
+            <p className="text-md text-gray-700 leading-relaxed">
+              At Vaarunya, we don’t just facilitate trade—we build enduring partnerships rooted in trust, transparency, and mutual growth. Our competitive pricing, client-first approach, and dedicated end-to-end support have made us a trusted choice for businesses across continents, making global trade secure, accessible, and rewarding for enterprises of all sizes. 
             </p>
             <Link
               href="/about"
