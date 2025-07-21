@@ -21,7 +21,7 @@ const HeroCarousel = () => {
       subtitle: "Connecting businesses worldwide with premium quality products",
       backgroundImage: slide1,
       primaryCTA: { text: "Get Quote", link: "/get-quote-intelligent-conversion-portal" },
-      secondaryCTA: { text: "Explore Products", link: "/process-transparency-center" },
+      secondaryCTA: { text: "Explore Products", link: "/products" },
       features: ["Global Network", "Quality Assured", "Transparent Process"]
     },
     {
@@ -30,7 +30,7 @@ const HeroCarousel = () => {
       subtitle: "From aromatic spices to finest textiles, discover our curated collection of export-quality products with international certifications.",
       backgroundImage: slide2,
       primaryCTA: { text: "Explore Products", link: "/products-interactive-category-explorer" },
-      secondaryCTA: { text: "View Certifications", link: "/about-trust-building-corporate-story" },
+      secondaryCTA: { text: "View Certifications", link: "/about" },
       features: ["ISO Certified", "FSSAI Approved", "Export Licensed"]
     },
     {

@@ -113,14 +113,14 @@ export default function About() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/get-quote-intelligent-conversion-portal"
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-primary font-montserrat font-semibold rounded-lg hover:bg-accent hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300"
               >
                 <Icon name="ArrowRight" size={20} className="mr-2" />
                 Get Started Today
               </Link>
               <Link
-                href="/products-interactive-category-explorer"
+                href="/products"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-montserrat font-semibold rounded-lg hover:bg-white hover:text-primary transition-all duration-300"
               >
                 <Icon name="Package" size={20} className="mr-2" />

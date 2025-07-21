@@ -17,14 +17,14 @@ const CantFindYourProduct = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/products-interactive-category-explorer"
+            href="/products"
             className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-montserrat font-semibold rounded-lg hover:bg-primary-dark hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300"
           >
             <Icon name="Search" size={20} className="mr-2" />
             Browse All Products
           </Link>
           <Link
-            href="/get-quote-intelligent-conversion-portal"
+            href="/contact"
             className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-montserrat font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
           >
             <Icon name="MessageSquare" size={20} className="mr-2" />
