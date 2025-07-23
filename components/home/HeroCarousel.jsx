@@ -14,7 +14,7 @@ const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const slides = [
+ const slides = [
     {
       id: 1,
       title: "Global Export Excellence",
@@ -30,7 +30,7 @@ const HeroCarousel = () => {
       subtitle: "From aromatic spices to finest textiles, discover our curated collection of export-quality products with international certifications.",
       backgroundImage: slide2,
       primaryCTA: { text: "Explore Products", link: "/products-interactive-category-explorer" },
-      secondaryCTA: { text: "View Certifications", link: "/about" },
+      secondaryCTA: { text: "View Certifications", link: "/about#certifications-gallery" }, // Updated link
       features: ["ISO Certified", "FSSAI Approved", "Export Licensed"]
     },
     {
@@ -54,13 +54,13 @@ const HeroCarousel = () => {
     {
       id: 5,
       title: "Innovation in Export",
-      subtitle: "Our company is built on trust, transparency, and timely delivery.We keep you informed at every stage with a clear process and real-time tracking.",
+      subtitle: "Our company is built on trust, transparency, and timely delivery. We keep you informed at every stage with a clear process and real-time tracking.",
       backgroundImage: slide5,
       primaryCTA: { text: "See Process", link: "/process-transparency-center" },
       secondaryCTA: { text: "About Us", link: "/contact-global-accessibility-hub" },
       features: ["Real-time Tracking", "Documentation Support", "Compliance Guidance"]
     }
-  ];
+];
 
   useEffect(() => {
     if (!isAutoPlaying) return;

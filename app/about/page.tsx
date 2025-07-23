@@ -21,6 +21,15 @@ export default function About() {
     setIsVisible(true);
   }, []);
 
+  useEffect(() => {
+  if (window.location.hash === '#certifications-gallery') {
+    const element = document.getElementById('certifications-gallery');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}, []);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -94,7 +103,9 @@ export default function About() {
 {/* Company Profile Download
 <CompanyProfile /> */}
       {/* Certifications Gallery */}
-      <CertificationsGallery />
+   <section id="certifications-gallery">
+  <CertificationsGallery />
+</section>
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-gradient-to-r from-primary to-primary-dark">
