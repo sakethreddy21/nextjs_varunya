@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Icon from'@/components/AppIcon';
-import Image from'@/components/AppImage';
+import Image from'next/image';
+import slide2 from '@/carousel_images/Agro_commodities_img.png';
+import slide1 from '@/carousel_images/cargo_img.png';
+import slide5 from '@/carousel_images/coffee_img.png';
+import slide4 from '@/carousel_images/spices_img.png';
+import slide3 from '@/carousel_images/fruits_and_veg _mg.png';
 
 const LeadershipTeam = () => {
   const [activeLeader, setActiveLeader] = useState(0);
@@ -11,7 +16,7 @@ const LeadershipTeam = () => {
       name: "Rudraraju Mithilesh Varma",
       position: "Founder & CEO",
       experience: "15+ Years",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      image: slide1,
       bio: `Rudraraju Mithilesh Varma is the Founder and Chief Executive Officer of Vaarunya Global EXIM, the driving force behind its vision to redefine India’s presence in global trade through an integrated, ethical, and impact-oriented export ecosystem that connects rural India directly to international markets. As a first-generation entrepreneur, He brings a bold and future-focused vision rooted in strategic foresight, strengthened by data-driven leadership, refined through operational excellence, and backed by deep expertise in agriculture, leather, and FMCG exports.
       With an unwavering commitment to transparency, innovation, and rural empowerment, Mithilesh has architected Vaarunya’s brand-led and compliance-driven model, bridging the gap between grassroots producers and international markets. His leadership is distinguished by a systems-thinking mindset, data-driven strategy, and the ability to build high-trust global partnerships.`,
       philosophy: "True leadership is not about commanding growth-it’s about cultivating ecosystems where trust, impact, and innovation thrive from the grassroots to the globe.",
@@ -84,6 +89,8 @@ const LeadershipTeam = () => {
                       src={leader.image}
                       alt={leader.name}
                       className="w-full h-full object-cover"
+                      width={64}
+                      height={64}
                     />
                   </div>
                   <div>
@@ -135,6 +142,8 @@ const LeadershipTeam = () => {
                         src={leader.image}
                         alt={leader.name}
                         className="w-full h-full object-cover"
+                        width={48}
+                        height={48}
                       />
                     </div>
                     <div>
