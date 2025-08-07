@@ -1,23 +1,15 @@
 import { NextResponse } from 'next/server';
+import { api } from '@/app/lib/db';
 
-import { getPool } from '@/app/lib/db';
-
-
-// GET /api/subcategories
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const category_id = searchParams.get('category_id');
-  const client = getPool();
+  const category_idParam = searchParams.get('category_id');
+  const category_id = category_idParam === null ? undefined : category_idParam;
+
   try {
-    let query = 'SELECT * FROM subcategories';
-    let values: string[] = [];
-    if (category_id) {
-      query += ' WHERE category_id = $1';
-      values = [category_id];
-    }
-    
-    const result = await client.query(query, values);
-    return NextResponse.json(result.rows, { status: 200 });
+    const filters = category_id ? { category_id } : undefined;
+    const subcategories = await api.getSubcategories(category_id);
+    return NextResponse.json(subcategories, { status: 200 });
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
