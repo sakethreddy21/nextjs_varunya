@@ -291,7 +291,7 @@ We maintain relationships with certified testing laboratories worldwide to ensur
         </div>
 
         <section className="py-16 mt-12 bg-gradient-to-r from-primary to-primary-dark">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <Icon name="HelpCircle" size={48} className="text-white mx-auto mb-4" />
               <h2 className="text-2xl lg:text-3xl font-montserrat font-bold text-white mb-4">
