@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className=" text-black">
       <div className="container mx-auto px-6 ">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-">
+        <div className="grid grid-cols-1 md:grid-cols-3 ">
           {/* Company Info Section */}
           <div className="space-y-6">
             <div className="flex items-center ">
@@ -21,11 +21,11 @@ export default function Footer() {
                   />
             </div>
               <div>
-                <h3 className="text-secondary text-xl font-semibold">Vaarunya Global Exim Pvt Ltd</h3>
+                <h3 className="text-primary text-[22px] font-extrabold">Vaarunya Global Exim Pvt Ltd</h3>
               </div>
             </div>
 
-            <p className="text-secondary leading-relaxed">
+            <p className="text-secondary leading-relaxed text-[18px] font-semibold">
               Building enduring partnerships through transparent global trade solutions. We connect verified suppliers with serious buyers worldwide, making international trade accessible, secure, and rewarding.
             </p>
 
@@ -53,18 +53,18 @@ export default function Footer() {
 
           {/* Quick Links Section */}
           <div className="md:ml-28">
-            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-primary text-[20px] font-semibold mb-6  mt-2">Quick Links</h3>
             <nav className="space-y-4">
-              <Link href="#" className="block text-secondary-300 hover:text-primary transition-colors">
+              <Link href="#" className="block text-[18px] text-secondary font-semibold hover:text-primary transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="block text-secondary-300 hover:text-primary transition-colors">
+              <Link href="/about" className="block text-[18px] text-secondary font-semibold hover:text-primary transition-colors">
                 About Us
               </Link>
-              <Link href="/categories" className="block text-secondary-300 hover:text-primary transition-colors">
+              <Link href="/categories" className="block text-[18px]  text-secondary font-semibold hover:text-primary transition-colors">
                 Products
               </Link>
-              <Link href="/contact" className="block text-secondary-300 hover:text-primary transition-colors">
+              <Link href="/contact" className="block text-[18px] text-secondary font-semibold hover:text-primary transition-colors">
                 Contact Us
               </Link>
             </nav>
@@ -72,22 +72,22 @@ export default function Footer() {
 
           {/* Contact Info Section */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-primary-100 text-xl font-semibold mb-2">Contact Info</h3>
+            <h3 className="text-primary text-xl font-semibold mb-2">Contact Info</h3>
             <div className="space-y-4">
-              <div className="text-primary-300">
-                <p>51-6-9, Vijayawada Muncipa Corporation</p>
+              <div className="text-[18px]  text-secondary font-semibold">
+                <p>51-6-9, Vijayawada Muncipal Corporation</p>
                 <p>Revenue Ward 2A, Machavaram,</p>
                 <p>Vijayawada - 520004, Andhra Pradesh, India</p>
               </div>
 
               <div>
-                <p className="text-yellow-500 font-medium">Phone:</p>
-                <p className="text-primary-300">+91 9100477554</p>
+                <p className="text-primary text-xl font-semibold ">Phone:</p>
+                <p className="text-[18px]  text-secondary font-semibold">+91 9100477554</p>
               </div>
 
               <div>
-                <p className="text-yellow-500 font-medium">Email:</p>
-                <p className="text-primary-300">info@vaarunyaglobalexim.com</p>
+                <p className="text-primary text-xl font-semibold mb-2">Email:</p>
+                <p className="text-[18px]  text-secondary font-semibold">info@vaarunyaglobalexim.com</p>
               </div>
             </div>
           </div>
