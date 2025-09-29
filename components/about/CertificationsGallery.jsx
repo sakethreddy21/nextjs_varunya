@@ -391,9 +391,7 @@ const CertificationsGallery = () => {
               </p>
 
               <div className="flex items-center justify-between">
-                <div className="text-xs text-secondary-light">
-                  Valid until: {new Date(cert.validUntil).toLocaleDateString()}
-                </div>
+                
                 <button className="text-primary hover:text-primary-dark transition-colors duration-300">
                   <Icon name="ExternalLink" size={16} />
                 </button>
