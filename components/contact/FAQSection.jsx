@@ -229,7 +229,7 @@ We maintain relationships with certified testing laboratories worldwide to ensur
 
   return (
     <section className="pt-16 bg-white">
-      <div className="w-full ">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-secondary-dark mb-4">
             Frequently Asked Questions
