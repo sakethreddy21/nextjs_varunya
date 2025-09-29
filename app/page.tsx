@@ -47,6 +47,10 @@ const Homepage = () => {
       <section className="py-8 lg:py-8 bg-background">
         <ProductCategories />
       </section>
+       <section className="pb-8 lg:pb-16 ">
+        <CantFindYourProduct />
+      </section>
+
  <section className="py-8 lg:py-8 bg-background">
         <OrderProcessingSteps />
       </section>
@@ -54,12 +58,9 @@ const Homepage = () => {
     {/* <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent">
       <PerformanceMetrics />
     </section> */}
- <section className="pb-8 lg:pb-16 ">
-        <CantFindYourProduct />
-      </section>
 
       {/* Start Your Trade Journey */}
-      <section className="py-4 lg:py-8 bg-secondary-dark text-white">
+      <section className="py-4 lg:py-8 bg-gradient-to-r from-primary/5 to-accent text-black">
         <TradeJourneySection />
       </section>
     </div>
