@@ -101,9 +101,9 @@ const ContactForm = () => {
       newErrors.email = 'Please enter a valid email';
     }
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
+    
     if (!formData.country.trim()) newErrors.country = 'Country is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+   
 
     if (formData.inquiry_type === 'new-business') {
       if (formData.product_categories.length === 0) {
@@ -316,7 +316,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-montserrat font-semibold text-secondary-dark mb-2">
-              Company Name *
+              Company Name 
             </label>
             <input
               type="text"
@@ -444,7 +444,7 @@ const ContactForm = () => {
 
         <div>
           <label className="block text-sm font-montserrat font-semibold text-secondary-dark mb-2">
-            Message *
+            Message 
           </label>
           <textarea
             name="message"

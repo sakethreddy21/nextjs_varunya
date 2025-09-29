@@ -1,5 +1,3 @@
-/* ContactPage in Next.js (app/contact/page.tsx) */
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -12,15 +10,53 @@ import OfficeLocations from '@/components/contact/OfficeLocations';
 import FAQSection from '@/components/contact/FAQSection';
 import ResponseCommitment from '@/components/contact/ResponseCommitment';
 
+interface UseMediaQueryProps {
+  (query: string): boolean;
+}
+
+const useMediaQuery: UseMediaQueryProps = (query) => {
+  const [matches, setMatches] = useState<boolean>(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener('resize', listener);
+    return () => window.removeEventListener('resize', listener);
+  }, [matches, query]);
+
+  return matches;
+};
+
 export default function ContactPage() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [showToast, setShowToast] = useState(false);
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 60000);
+    }, 1000); // Update every second for live time including seconds
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (showToast) {
+      const toastTimer = setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+      return () => clearTimeout(toastTimer);
+    }
+  }, [showToast]);
+
+  const handleCopyToClipboard = (text: string) => {
+    if (isDesktop) {
+      navigator.clipboard.writeText(text);
+      setShowToast(true);
+    }
+  };
 
   const contactMethods = [
     {
@@ -66,7 +102,6 @@ export default function ContactPage() {
   const quickLinks = [
     { name: "Get Quote", path: "#contact-form", icon: "Calculator" },
     { name: "Our Products", path: "/categories", icon: "Package" },
-// { name: "Our Process", path: "/process-transparency-center", icon: "GitBranch" },
     { name: "About Us", path: "/about", icon: "Users" }
   ];
 
@@ -102,38 +137,62 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
-              <div key={index} className="card-elevated p-6 hover:shadow-hover transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+              <div key={index} className="card-elevated p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                     <Icon name={method.icon} size={24} className="text-primary" />
                   </div>
                   <h3 className="text-xl font-montserrat font-semibold text-secondary-dark">
                     {method.title}
                   </h3>
                 </div>
-                <p className="text-secondary-light mb-4">{method.description}</p>
-                <div className="space-y-2">
+                <p className="text-secondary-light text-sm mb-4">{method.description}</p>
+                <div className="space-y-3">
                   {method.details.map((detail, idx) => (
-                    <div key={idx} className="text-sm">
+                    <div key={idx} className="flex flex-col bg-gray-50 p-3 rounded-md">
                       {'region' in detail && (
-                        <div className="flex justify-between">
-                          <span className="font-medium text-secondary">{detail.region}:</span>
-                          <span className="text-primary font-semibold">{detail.number}</span>
-                        </div>
+                        <>
+                          <div className="flex justify-between items-center pb-2">
+                            <span className="font-medium text-secondary">{detail.region}:</span>
+                            <span className="text-xs text-secondary-light mt-1">{detail.hours}</span>
+                          </div>
+                          <div className="relative group">
+                            <a
+                              href={method.type === "WhatsApp" ? `https://wa.me/${detail.number.replace(/[^0-9]/g, '')}` : `tel:${detail.number.replace(/[^0-9+]/g, '')}`}
+                              onClick={(e) => {
+                                if (isDesktop) {
+                                  e.preventDefault();
+                                  handleCopyToClipboard(detail.number);
+                                }
+                              }}
+                              className="text-primary font-semibold"
+                            >
+                              {detail.number}
+                            </a>
+                            {isDesktop && (
+                              <span className="absolute left-0 top-full mt-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2">
+                                Click to copy to clipboard
+                              </span>
+                            )}
+                          </div>
+                        </>
                       )}
                       {'type' in detail && (
-                        <div className="flex justify-between">
-                          <span className="font-medium text-secondary">{detail.type}:</span>
-                          <span className="text-primary font-semibold">{detail.email}</span>
-                        </div>
+                        <>
+                          <div className="flex justify-between items-center pb-2">
+                            <span className="font-medium text-secondary">{detail.type}:</span>
+                            <span className="text-xs text-green-600 mt-1">{detail.response}</span>
+                          </div>
+                          <div className="relative group">
+                            <a href={`mailto:${detail.email}`} className="text-primary font-semibold text-xs">{detail.email}</a>
+                            {isDesktop && (
+                              <span className="absolute left-0 top-full mt-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2">
+                                Click to copy to clipboard
+                              </span>
+                            )}
+                          </div>
+                        </>
                       )}
-                    
-                    {'hours' in detail && !('availability' in detail) && (
-                      <div className="text-secondary-light text-center">{detail.hours}</div>
-                    )}
-                    {'response' in detail && (
-                      <div className="text-center text-green-600 font-medium">{detail.response}</div>
-                    )}
                     </div>
                   ))}
                 </div>
@@ -142,8 +201,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-    {/* <GlobalMap /> */}
 
       <section className="py-16 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,17 +219,23 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="text-center">
                     <div className="text-sm font-medium text-secondary">India</div>
-                    <div className="text-primary font-semibold">{currentTime.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
+                    <div className="text-primary font-semibold">
+                      {currentTime.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })}
+                    </div>
                     <div className="text-xs text-secondary-light">9 AM - 6 PM IST</div>
                   </div>
                   <div className="text-center">
                     <div className="text-sm font-medium text-secondary">USA</div>
-                    <div className="text-primary font-semibold">{currentTime.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour12: true })}</div>
+                    <div className="text-primary font-semibold">
+                      {currentTime.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })}
+                    </div>
                     <div className="text-xs text-secondary-light">9 AM - 5 PM EST</div>
                   </div>
                   <div className="text-center">
                     <div className="text-sm font-medium text-secondary">UAE</div>
-                    <div className="text-primary font-semibold">{currentTime.toLocaleTimeString('en-AE', { timeZone: 'Asia/Dubai', hour12: true })}</div>
+                    <div className="text-primary font-semibold">
+                      {currentTime.toLocaleTimeString('en-AE', { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })}
+                    </div>
                     <div className="text-xs text-secondary-light">9 AM - 6 PM GST</div>
                   </div>
                 </div>
@@ -196,44 +259,15 @@ export default function ContactPage() {
         </div>
       </section>
 
-{/* <OfficeLocations /> */}
-    <ResponseCommitment />
+      {showToast && (
+        <div className="fixed bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-lg shadow-lg flex items-center transition-opacity duration-300">
+          <Icon name="CheckCircle" size={20} className="mr-2" />
+          Number copied to clipboard!
+        </div>
+      )}
+
+      <ResponseCommitment />
       <FAQSection />
-
-    {/* <section className="py-16 bg-gradient-to-r from-primary to-primary-dark">
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-        <Icon name="AlertCircle" size={48} className="text-white mx-auto mb-4" />
-        <h2 className="text-2xl lg:text-3xl font-montserrat font-bold text-white mb-4">Urgent Trade Support</h2>
-        <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-            For time-sensitive shipments, customs clearance issues, or urgent trade matters, our emergency support team is available 24/7.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919876543210" className="inline-flex items-center px-6 py-3 bg-white text-primary font-montserrat font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
-            <Icon name="Phone" size={20} className="mr-2" />
-            Emergency Hotline
-            </a>
-            <a href="https://wa.me/919876543210" className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-montserrat font-semibold rounded-lg hover:bg-green-700 transition-all duration-300">
-            <Icon name="MessageCircle" size={20} className="mr-2" />
-            WhatsApp 24/7
-            </a>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <section className="py-16 bg-secondary-dark">
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-white mb-6">Ready to Expand Globally?</h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        Join thousands of businesses who trust Vaarunya for their international trade needs. Let's build your global success story together.
-        </p>
-        <Link href="/get-quote-intelligent-conversion-portal" className="inline-flex items-center px-8 py-4 bg-primary text-white font-montserrat font-bold text-lg rounded-lg hover:bg-primary-dark hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300">
-        <Icon name="ArrowRight" size={24} className="mr-2" />
-        Get Your Custom Quote
-        </Link>
-    </div>
-    </section> */}
     </div>
   );
 }

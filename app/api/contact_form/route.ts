@@ -33,12 +33,12 @@ export async function POST(req: Request) {
       'last_name',
       'email',
       'phone',
-      'company',
+    
       'country',
       'order_volume',
       'delivery_region',
       'communication_frequency',
-      'message',
+      
       'preferred_contact',
       'urgency'
     ]
@@ -72,13 +72,13 @@ export async function POST(req: Request) {
       last_name: body.last_name,
       email: body.email,
       phone: body.phone,
-      company: body.company,
+      company: body.company? body.company : '',
       country: body.country,
       product_categories: body.product_categories,
       order_volume: body.order_volume,
       delivery_region: body.delivery_region,
       communication_frequency: body.communication_frequency,
-      message: body.message,
+      message: body.message? body.message : '',
       preferred_contact: body.preferred_contact,
       urgency: body.urgency,
     })
