@@ -1,9 +1,18 @@
 import Link from "next/link"
 import { Facebook, Linkedin, Mail } from "lucide-react"
 import logo from '@/Vaarunya_cropped_bg.png';
+import Icon from '@/components/AppIcon';
 import logo2 from '@/logo2.png';
 import Image from "next/image"
 export default function Footer() {
+    const socialLinks = [
+    { name: "LinkedIn", icon: "Linkedin", url: "https://www.linkedin.com/company/vaarunya-global-exim-pvt-ltd/about/?viewAsMember=true", color: "text-blue-600" },
+    { name: "Twitter", icon: "Twitter", url: "#", color: "text-blue-400" },
+    { name: "Youtube", icon: "Youtube", url: "https://youtube.com/@vaarunyaglobaleximpvtltd?si=IXuogE82pzbX57j5", color: "text-red-500" },
+    { name: "Threads", icon: "AtSign", url: "https://www.threads.com/@vaarunyaglobalexim?igshid=NTc4MTIwNjQ2YQ==", color: "text-black-500" },
+    { name: "Facebook", icon: "Facebook", url: "https://www.facebook.com/vaarunyaglobalexim", color: "text-blue-700" },
+    { name: "Instagram", icon: "Instagram", url: "https://www.instagram.com/vaarunyaglobalexim?igsh=bjdwb2xhMzQ4Y21w&utm_source=qr", color: "text-pink-600" }
+  ];
   return (
     <footer className=" text-black">
       <div className="container mx-auto px-6 ">
@@ -30,24 +39,11 @@ export default function Footer() {
             </p>
 
             <div className="flex space-x-4">
-              <Link
-                href="#"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-              </Link>
+               {socialLinks.map((social, index) => (
+                                  <a key={index} href={social.url} className={`w-10 h-10 rounded-lg border-2 border-gray-200 flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-all duration-300 ${social.color}`} aria-label={social.name}>
+                                    <Icon name={social.icon} size={20} />
+                                  </a>
+                                ))}
             </div>
           </div>
 
