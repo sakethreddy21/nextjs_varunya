@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '../AppIcon';
-import logo from '@/logo1.png';
-import logo2 from '@/logo2.png';
+import logo from '@/logo_v1.png';
+
 import Image from 'next/image';
 
 const Header = () => {
@@ -63,19 +63,13 @@ const Header = () => {
               {isScrolled && (
                 <div className='flex flex-row space-x-0'>
                   <Image
-                    width={84}
-                    height={84}
-                    src={logo2}
-                    alt="Vaarunya Logo"
-                    className="h-12 w-auto object-contain"
-                  />
-                  <Image
-                    width={84}
-                    height={84}
+                    width={184}
+                    height={184}
                     src={logo}
                     alt="Vaarunya Logo"
-                    className="h-12 w-auto object-contain"
+                    className="h-40 w-auto object-contain"
                   />
+                 
                 </div>
               )}
             </div>
