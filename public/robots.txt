@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.vaarunyaglobalexim.com/
+
+# Sitemaps
+Sitemap: https://www.vaarunyaglobalexim.com/sitemap.xml
