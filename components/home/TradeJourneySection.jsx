@@ -9,7 +9,6 @@ export default function Footer() {
     { name: "LinkedIn", icon: "Linkedin", url: "https://www.linkedin.com/company/vaarunya-global-exim-pvt-ltd/about/?viewAsMember=true", color: "text-blue-600" },
     { name: "Twitter", icon: "Twitter", url: "#", color: "text-blue-400" },
     { name: "Youtube", icon: "Youtube", url: "https://youtube.com/@vaarunyaglobaleximpvtltd?si=IXuogE82pzbX57j5", color: "text-red-500" },
-    { name: "Threads", icon: "AtSign", url: "https://www.threads.com/@vaarunyaglobalexim?igshid=NTc4MTIwNjQ2YQ==", color: "text-black-500" },
     { name: "Facebook", icon: "Facebook", url: "https://www.facebook.com/vaarunyaglobalexim", color: "text-blue-700" },
     { name: "Instagram", icon: "Instagram", url: "https://www.instagram.com/vaarunyaglobalexim?igsh=bjdwb2xhMzQ4Y21w&utm_source=qr", color: "text-pink-600" }
   ];
