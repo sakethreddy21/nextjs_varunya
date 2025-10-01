@@ -52,7 +52,7 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className={`flex items-center justify-between ${isScrolled ? 'h-22 lg:h-20' : 'h-16 lg:h-20'}`}>
           {/* Logo - Visible only when scrolled */}
           <Link 
             href="/" 
@@ -67,7 +67,7 @@ const Header = () => {
                     height={184}
                     src={logo}
                     alt="Vaarunya Logo"
-                    className="h-40 w-auto object-contain"
+                    className="h-[200px] lg:h-40 w-auto object-contain"
                   />
                  
                 </div>
